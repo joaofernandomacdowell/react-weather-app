@@ -13,7 +13,7 @@ module.exports = {
       } else {
         return res.data.main.temp;
       }
-    }, function () {
+    }, function (err) {
       throw new Error('Unable to fetch weather.');
     });
   }
