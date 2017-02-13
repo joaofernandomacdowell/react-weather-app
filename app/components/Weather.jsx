@@ -38,7 +38,7 @@ var Weather = React.createClass({
 
     if (location && location.length > 0) {
       this.handleSearch(location);
-      window.location.hash = '#/'
+      window.location.hash = '#/';
     }
   },
   componentWillReceiveProps: function (newProps) {
@@ -46,7 +46,7 @@ var Weather = React.createClass({
 
     if (location && location.length > 0) {
       this.handleSearch(location);
-      window.location.hash = '#/'
+      window.location.hash = '#/';
     }
   },
   render: function () {
@@ -54,8 +54,7 @@ var Weather = React.createClass({
 
     function renderMessage () {
       if (isLoading) {
-        return <h3 className="text-center">Fetching weather...</h3>
-
+        return <h3 className="text-center">Fetching weather...</h3>;
       } else if (temp && location) {
           return <WeatherMessage temp={temp} location={location}/>
       }
@@ -80,4 +79,4 @@ var Weather = React.createClass({
   }
 });
 
-module .exports = Weather;
+module.exports = Weather;
